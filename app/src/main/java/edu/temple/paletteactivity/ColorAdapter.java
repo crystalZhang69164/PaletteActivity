@@ -51,13 +51,15 @@ public class ColorAdapter extends BaseAdapter {
         //sets the value of the color at position index
         textView.setText(colors[position]);
 
-        /*
+        //if colors is at position 1 or more then set the background color to
+        //the background color at that position
+
         if(position!=0){
             textView.setBackgroundColor(Color.parseColor(colors[position]));
-        }*/
+        }
 
         //sets the background color of each view in the dropdown box of the spinner
-        textView.setBackgroundColor(Color.parseColor(colors[position]));
+        //textView.setBackgroundColor(Color.parseColor(colors[position]));
         //text size and padding
         textView.setTextSize(22);
         textView.setPadding(5,5,0,5);

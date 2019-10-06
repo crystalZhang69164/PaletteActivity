@@ -21,7 +21,7 @@ public class PaletteActivity extends AppCompatActivity {
         //declares an intent
         final Intent intent = new Intent(this,CanvasActivity.class);
         //array of colors
-        final String colors[]={"White","Blue","Green","Red","Purple","Cyan","Magenta","Lime","Aqua","Silver","Yellow"};
+        final String colors[]={"Pick a color","Blue","Green","Red","Purple","Cyan","Magenta","Lime","Aqua","Silver","Yellow"};
 
         //finds the reference to the spinner with id spinner1
         Spinner spinner = findViewById(R.id.spinner1);
@@ -43,7 +43,9 @@ public class PaletteActivity extends AppCompatActivity {
                 //if position is 1 or more change the background color in the second activity
                 //if position is 0 the background color of 2nd activity will not pop up when
                 //the item in the spinner is selected
-                if(position >0){
+                if(position !=0){
+                    //sets the background of the layout to w/e was selected for the spinner
+                    findViewById(R.id.layout1).setBackgroundColor(Color.parseColor(colors[position]));
                     //selected color
                     String selectedColor = colors[position];
                     intent.putExtra(COLOR,selectedColor);
@@ -54,8 +56,7 @@ public class PaletteActivity extends AppCompatActivity {
 
 
 
-                //sets the background of the layout to w/e was selected for the spinner
-                findViewById(R.id.layout1).setBackgroundColor(Color.parseColor(colors[position]));
+
 
             }
 

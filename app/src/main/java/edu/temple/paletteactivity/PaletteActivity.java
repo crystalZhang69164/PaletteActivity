@@ -2,7 +2,9 @@ package edu.temple.paletteactivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -21,7 +23,15 @@ public class PaletteActivity extends AppCompatActivity {
         //declares an intent
         final Intent intent = new Intent(this,CanvasActivity.class);
         //array of colors
-        final String colors[]={"Pick a color","Blue","Green","Red","Purple","Cyan","Magenta","Lime","Aqua","Silver","Yellow"};
+        //final String colors[]={"Pick a color","Blue","Green","Red","Purple","Cyan","Magenta","Lime","Aqua","Silver","Yellow"};
+
+
+        //Resources res = [context.this]getResources();
+
+        //color_array is the name of the array on the string xml file
+        //retrieving the string array resource and storing it in a array of colors variable
+        final String[] colors = getResources().getStringArray(R.array.color_array);
+
 
         //finds the reference to the spinner with id spinner1
         Spinner spinner = findViewById(R.id.spinner1);

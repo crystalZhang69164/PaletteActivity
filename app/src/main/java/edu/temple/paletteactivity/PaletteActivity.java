@@ -31,14 +31,14 @@ public class PaletteActivity extends AppCompatActivity {
         //color_array is the name of the array on the string xml file
         //retrieving the string array resource and storing it in a array of colors variable
         final String[] colors = getResources().getStringArray(R.array.color_array);
-
+        final String[] colors_hex = getResources().getStringArray(R.array.color_hexes);
 
         //finds the reference to the spinner with id spinner1
         Spinner spinner = findViewById(R.id.spinner1);
         //final Layout layout = findViewById(R.id.layout1);
 
         //making an instance of the color adapter
-        ColorAdapter adapter = new ColorAdapter(PaletteActivity.this, colors);
+        ColorAdapter adapter = new ColorAdapter(PaletteActivity.this, colors, colors_hex);
 
 
 
@@ -55,15 +55,13 @@ public class PaletteActivity extends AppCompatActivity {
                 //the item in the spinner is selected
                 if(position !=0){
                     //sets the background of the layout to w/e was selected for the spinner
-                    findViewById(R.id.layout1).setBackgroundColor(Color.parseColor(colors[position]));
+                    findViewById(R.id.layout1).setBackgroundColor(Color.parseColor(colors_hex[position]));
                     //selected color
-                    String selectedColor = colors[position];
+                    String selectedColor = colors_hex[position];
                     intent.putExtra(COLOR,selectedColor);
                     //starts a new activity
                     startActivity(intent);
                 }
-
-
 
 
 

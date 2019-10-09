@@ -7,4 +7,17 @@
         <item>Red</item>
         <item>Yellow</item>
     </string-array>
+
+    <string-array name="color_hexes">
+        <item>#FFFFFF</item>
+        <item>#0000FF</item>
+        <item>#008000</item>
+        <item>#FF0000</item>
+        <item>#FFFF00</item>
+
+
+
+    </string-array>
+
+
 </resources>

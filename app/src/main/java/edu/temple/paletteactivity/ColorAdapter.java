@@ -11,10 +11,12 @@ public class ColorAdapter extends BaseAdapter {
 
     Context context;
     String colors[];
+    String[] hex_color;
 
-    public ColorAdapter(Context context, String[] colors){
+    public ColorAdapter(Context context, String[] colors, String[] hex_colors){
         this.context = context;
         this.colors=colors;
+        this.hex_color = hex_colors;
     }
 
     @Override
@@ -55,7 +57,7 @@ public class ColorAdapter extends BaseAdapter {
         //the background color at that position
 
         if(position!=0){
-            textView.setBackgroundColor(Color.parseColor(colors[position]));
+            textView.setBackgroundColor(Color.parseColor(hex_color[position]));
         }
 
         //sets the background color of each view in the dropdown box of the spinner

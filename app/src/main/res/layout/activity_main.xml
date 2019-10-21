@@ -6,15 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PaletteActivity">
-
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="192dp"
-        android:layout_marginBottom="515dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--<FrameLayout
+        android:layout_height="0dp"
+        android:layout_width = "match_parent"
+        android:id="@+id/spinnerSection"
+        android:layout_weight = ".1">
+    </FrameLayout> -->
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
